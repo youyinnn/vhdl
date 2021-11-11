@@ -1,0 +1,13 @@
+v 4
+file . "sync_reg_8b_tb.vhd" "c8c2e24ff886a6327024d17067a1be1e03ca0d1a" "20211111200824.770":
+  entity sync_reg_8b_tb at 1( 0) + 0 on 21;
+  architecture behavioural of sync_reg_8b_tb at 8( 83) + 0 on 22;
+file . "async_reg_8b_tb.vhd" "225145b1348a248400ab3858a415d85e46995fd2" "20211111200125.231":
+  entity async_reg_8b_tb at 1( 0) + 0 on 13;
+  architecture behavioural of async_reg_8b_tb at 8( 84) + 0 on 14;
+file . "async_reg_8b.vhd" "da8d931db61257a90f97876a5636d414fae1bf88" "20211111200125.167":
+  entity async_reg_8b at 1( 0) + 0 on 11;
+  architecture arch of async_reg_8b at 13( 239) + 0 on 12;
+file . "sync_reg_8b.vhd" "2cefce4c2dde234a398fe0484962e5386f49dd10" "20211111200824.708":
+  entity sync_reg_8b at 1( 0) + 0 on 19;
+  architecture arch of sync_reg_8b at 13( 236) + 0 on 20;
