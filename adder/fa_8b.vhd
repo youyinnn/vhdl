@@ -11,7 +11,7 @@ entity fa_8b is
     );
 end fa_8b;
 
-architecture dataflow_arch of fa_8b is
+architecture structure_arch of fa_8b is
 
     signal c1, c2, c3, c4   :	std_logic;
 	signal c5, c6, c7	    :	std_logic;
@@ -49,4 +49,4 @@ begin
     stage_14: fa_1b port map('0', '0', c14, sum(14), c15);
     stage_15: fa_1b port map('0', '0', c15, sum(15), c_out);
 
-end dataflow_arch;
+end structure_arch;
