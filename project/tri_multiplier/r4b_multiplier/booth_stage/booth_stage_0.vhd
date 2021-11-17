@@ -20,10 +20,10 @@ begin
 
     with code select
         partical_product <= 
-            (others => '0') when "00",      -- 000
-            "00" & mc       when "01",      -- 010
-            mc_neg & "0"    when "10",      -- 100
-            "1" & mc_neg    when others;    -- 110 (will only be
+            (others => '0')     when "00",      -- 000
+            "00" & mc           when "01",      -- 010
+            mc_neg & "0"        when "10",      -- 100
+            mc_neg(8) & mc_neg  when others;    -- 110 (will only be
 
     msb_of_select <= partical_product(9);
 

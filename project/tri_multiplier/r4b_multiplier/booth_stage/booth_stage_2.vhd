@@ -20,11 +20,11 @@ begin
 
     with code select
         partical_product <= 
-            (others => '0') when "000" | "111",    -- 000 | 111
-            "00" & mc       when "001" | "010",    -- 010 | 001
-            "0" & mc & "0"  when "011",             -- 111
-            mc_neg & "0"    when "100",             -- 100
-            "1" & mc_neg    when others;            -- 110 | 101 (will only be
+            (others => '0')     when "000" | "111",    -- 000 | 111
+            "00" & mc           when "001" | "010",    -- 010 | 001
+            "0" & mc & "0"      when "011",             -- 111
+            mc_neg & "0"        when "100",             -- 100
+            mc_neg(8) & mc_neg  when others;            -- 110 | 101 (will only be
 
     msb_of_select <= partical_product(9);
 
