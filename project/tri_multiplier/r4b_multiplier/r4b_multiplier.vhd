@@ -23,6 +23,9 @@ architecture arch of r4b_multiplier is
     signal signal_p3            : std_logic_vector(15 downto 0);
     signal signal_p4            : std_logic_vector(15 downto 0);
 
+    -- the sum of all stage
+    signal signal_p            : std_logic_vector(15 downto 0);
+
     component nine_bit_negation_in_2c is
         port(
             x   : in  std_logic_vector(7 downto 0);
@@ -125,6 +128,9 @@ begin
         p_next => signal_p4
     );
 
-    p <= std_logic_vector(unsigned(signal_p0) + unsigned(signal_p1) + unsigned(signal_p2) + unsigned(signal_p3) + unsigned(signal_p4));
+
+    signal_p <= std_logic_vector(unsigned(signal_p0) + unsigned(signal_p1) + unsigned(signal_p2) + unsigned(signal_p3) + unsigned(signal_p4));
+
+    p <= "0000000000000000" when mc = "00000000" else signal_p;
 
 end arch;

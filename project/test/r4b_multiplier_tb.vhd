@@ -11,7 +11,7 @@ architecture Behavioural of r4b_multiplier_tb is
     -- integer mc & mp & pd
     signal r_input_mc   : integer  := 0;
     signal r_input_mp   : integer  := 0;
-    signal r_input_pd   : integer  := 0;
+    signal r_output_pd   : integer  := 0;
     
     -- std_logic_vector mc & mp
     signal r_input_mc_slv   : std_logic_vector(7 downto 0)  := (OTHERS => '0');
@@ -42,7 +42,7 @@ begin
 
         r_input_mc_slv <= std_logic_vector(to_unsigned(r_input_mc, 8));
         r_input_mp_slv <= std_logic_vector(to_unsigned(r_input_mp, 8));
-        r_input_pd <= r_input_mc * r_input_mp;
+        r_output_pd <= r_input_mc * r_input_mp;
 
         booth : r4b_multiplier
         port map (
@@ -57,6 +57,8 @@ begin
             3 after 1500 ns,
             1 after 2000 ns,
             80 after 2500 ns,
+            0 after 3000 ns,
+            32 after 3500 ns,
             0 after 10000 ns    
         ;
             
@@ -66,14 +68,18 @@ begin
             12 after 1500 ns,
             13 after 2000 ns,
             99 after 2500 ns,
+            12 after 3000 ns,
+            0 after 3500 ns,
             0 after 10000 ns
         ;
 
-        as_1: assert_output port map(r_output_p, r_input_pd, 501 ns);
-        as_2: assert_output port map(r_output_p, r_input_pd, 1001 ns);
-        as_3: assert_output port map(r_output_p, r_input_pd, 1501 ns);
-        as_4: assert_output port map(r_output_p, r_input_pd, 2001 ns);
-        as_5: assert_output port map(r_output_p, r_input_pd, 2501 ns);
-        as_final: assert_output port map(r_output_p, r_input_pd, 10001 ns);
+        as_1: assert_output port map(r_output_p, r_output_pd, 501 ns);
+        as_2: assert_output port map(r_output_p, r_output_pd, 1001 ns);
+        as_3: assert_output port map(r_output_p, r_output_pd, 1501 ns);
+        as_4: assert_output port map(r_output_p, r_output_pd, 2001 ns);
+        as_5: assert_output port map(r_output_p, r_output_pd, 2501 ns);
+        as_6: assert_output port map(r_output_p, r_output_pd, 3001 ns);
+        as_7: assert_output port map(r_output_p, r_output_pd, 3501 ns);
+        as_final: assert_output port map(r_output_p, r_output_pd, 10001 ns);
 
 end Behavioural;

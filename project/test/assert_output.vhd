@@ -14,7 +14,7 @@ end assert_output;
 architecture arch of assert_output is
 begin
 
-        process
+    process
         begin
             wait for dl;
             assert to_integer(unsigned(opt)) = assert_int 
