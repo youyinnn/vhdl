@@ -14,7 +14,6 @@ entity booth_stage_3 is
 end booth_stage_3;
 
 architecture arch of booth_stage_3 is
-    signal msb_of_select        : std_logic;
     signal partical_product     : std_logic_vector(9 downto 0);
 begin
 
@@ -25,8 +24,6 @@ begin
             "0" & mc & "0"  when "011",             -- 111
             mc_neg & "0"    when "100",             -- 100
             "1" & mc_neg    when others;            -- 110 | 101 (will only be
-
-    msb_of_select <= partical_product(9);
 
     p_next <= partical_product & "000000";
 

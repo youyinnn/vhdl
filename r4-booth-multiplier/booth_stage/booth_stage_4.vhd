@@ -12,7 +12,6 @@ entity booth_stage_4 is
 end booth_stage_4;
 
 architecture arch of booth_stage_4 is
-    signal partical_product     : std_logic_vector(9 downto 0);
 begin
 
     with code select
