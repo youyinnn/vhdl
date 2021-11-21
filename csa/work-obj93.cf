@@ -1,0 +1,31 @@
+v 4
+file . "xor_logic.vhd" "aee90de35b8dbd6ea4588214e797885770427563" "20211121005913.320":
+  entity xor_logic at 1( 0) + 0 on 69;
+  architecture or_logic_behavior of xor_logic at 10( 150) + 0 on 70;
+file . "two_to_one_mux.vhd" "d2325ae2eb202727ddb9e42767a0f4e7d616635a" "20211121005913.319":
+  entity two_to_one_mux at 1( 0) + 0 on 67;
+  architecture rtl of two_to_one_mux at 10( 153) + 0 on 68;
+file . "rca_4b.vhd" "bf4f4cbad884273c94d41429c59d085237ba3066" "20211121005913.318":
+  entity rca_4bit at 1( 0) + 0 on 65;
+  architecture rtl of rca_4bit at 13( 280) + 0 on 66;
+file . "or_logic.vhd" "791e328a0fc9ebe5f7dc38a2706478f8e6c327f5" "20211121005913.317":
+  entity or_logic at 1( 0) + 0 on 63;
+  architecture or_logic_behavior of or_logic at 10( 148) + 0 on 64;
+file . "not_logic.vhd" "1fa396139dfc24b7084979ddc34d0dd3db57ec8a" "20211121005913.317":
+  entity not_logic at 1( 0) + 0 on 61;
+  architecture not_logic_behavior of not_logic at 10( 146) + 0 on 62;
+file . "full_adder.vhd" "a8da396f44e795c20b49bfb6ecd01d43c3627bb5" "20211121005913.316":
+  entity full_adder at 1( 0) + 0 on 59;
+  architecture full_adder_arch of full_adder at 10( 162) + 0 on 60;
+file . "csa_4b.vhd" "db7c54da8e6307fcd210af1b7ea2293f7ce479a9" "20211121005913.315":
+  entity csa_4bit at 1( 0) + 0 on 57;
+  architecture rtl of csa_4bit at 13( 287) + 0 on 58;
+file . "csa_16b_tb.vhd" "7f44aea047430d57ef56d3c2c6c56d8abbab99ec" "20211121005913.313":
+  entity csa_16b_tb at 1( 0) + 0 on 55;
+  architecture behavioural of csa_16b_tb at 8( 79) + 0 on 56;
+file . "csa_16b.vhd" "7d679e2ec02dd78212c8173bb0884e96034295bc" "20211121005913.312":
+  entity csa_16bit at 1( 0) + 0 on 53;
+  architecture rtl of csa_16bit at 12( 259) + 0 on 54;
+file . "and_logic.vhd" "f0a436686abb6a61c3cbd53d5d58acc8d785aab1" "20211121005913.310":
+  entity and_logic at 1( 0) + 0 on 51;
+  architecture and_logic_behavior of and_logic at 10( 150) + 0 on 52;
